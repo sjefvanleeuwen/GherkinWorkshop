@@ -2,18 +2,6 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Run Server",
-      "type": "node",
-      "request": "launch",
-      "program": "${workspaceFolder}/server.ts",   // Path to your server.ts file
-      "args": [],
-      "cwd": "${workspaceFolder}",
-      "sourceMaps": true,
-      "console": "integratedTerminal",
-      "internalConsoleOptions": "neverOpen",
-      "runtimeArgs": ["--nolazy", "-r", "ts-node/register"]
-    },
-    {
       "name": "Debug Cucumber Tests",
       "type": "node",
       "request": "launch",

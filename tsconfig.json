@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "sourceMap": true,  // This enables source maps for TypeScript debugging
+    "outDir": "./dist"
+  },
+  "include": ["features/**/*.ts"],
+  "exclude": ["node_modules"]
+}

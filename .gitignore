@@ -1,0 +1,19 @@
+# Node.js dependencies
+node_modules/
+
+# Playwright specific files
+playwright-report/
+test-results/
+screenshots/
+videos/
+trace.zip
+
+# TypeScript build cache
+*.tsbuildinfo
+
+# Logs
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db

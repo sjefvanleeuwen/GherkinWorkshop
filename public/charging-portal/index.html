@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EV Charging Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>EV Charging Portal</h1>
+    </header>
+
+    <main>
+        <!-- Login Section -->
+        <section id="login-section">
+            <h2>Login</h2>
+            <form id="login-form">
+                <label for="username">Username:</label>
+                <input type="text" id="username" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" required>
+
+                <button type="submit">Login</button>
+            </form>
+        </section>
+
+        <!-- Dashboard Section (Hidden until logged in) -->
+        <section id="dashboard" class="hidden">
+            <h2>Welcome, <span id="driver-name"></span></h2>
+
+            <!-- Charge Card Request -->
+            <div id="charge-card-section">
+                <h3>Request a Charge Card</h3>
+                <label for="card-type">Select Charge Card Type:</label>
+                <select id="card-type">
+                    <option value="basic">Basic Charge Card - $5/month</option>
+                    <option value="premium">Premium Charge Card - $10/month</option>
+                    <option value="payg">Pay-As-You-Go Charge Card - $1/session</option>
+                </select>
+                <button id="request-card">Request Charge Card</button>
+                <div id="request-confirmation" class="hidden">
+                    <p>Your request has been processed. Your card tag is <span id="card-tag"></span>.</p>
+                </div>
+            </div>
+
+            <!-- Agreement -->
+            <div id="agreement-section" class="hidden">
+                <h3>Agreement</h3>
+                <p id="agreement-text"></p>
+            </div>
+
+            <!-- Manage Charge Card -->
+            <div id="manage-card-section" class="hidden">
+                <h3>Manage Your Charge Card</h3>
+                <p>Card Status: <span id="card-status">Active</span></p>
+                <button id="end-contract">End Contract</button>
+                <p id="contract-ended" class="hidden">Your contract has ended, and your card is deactivated.</p>
+            </div>
+
+            <!-- Charging Session Section -->
+            <div id="charging-section" class="hidden">
+                <h3>Start Charging Session</h3>
+                <button id="start-charging">Start Charging</button>
+                <p id="charging-session-success" class="hidden">Charging session successfully started and recorded with card <span id="used-card-tag"></span>.</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
